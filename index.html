@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="blur" >
+    <div class="heading1">
+    <span class="p1">Task</span><span class="heading">List</span>
+    </div>
+    <div id="heading2">
+     <a id="task" onclick=show() ><i class="fas fa-plus-circle"></i><span class="icon">Add Task</span></a>
+    </div>
+    <div id="container" >
+        <!-- <h1>No items to display</h1> -->
+
+    </div>
+    </div>
+    <div id="taskinput">
+        <div class="new" >
+            Add New Task
+        </div>
+        
+        <input type="text" name="" id="inputfield" value="">
+        <br><br>
+        <button type="submit" onclick=add()  id="add">ADD</button>
+        <button onclick=cancel() id="cancel">Cancel</button>
+    
+
+
+    </div>
+    <div id="taskinput2">
+        <div class="new" >
+            Add New Task
+        </div>
+        
+        <input type="text" name="" id="inputfield2" value="">
+        <br><br>
+        <button type="submit" onclick=addList()  id="add">ADD</button>
+        <button onclick=cancel() id="cancel">Cancel</button>
+    
+
+
+    </div>
+    
+    <!-- <div class="card">
+        <p id="mainText"></p>
+        <hr>
+        <button id="addbtn"><i class="fas fa-plus-circle"></i></button>
+        <button id="delbtn"><i class="fas fa-trash-alt"></i></button>
+    </div> -->
+    `<div>
+        <li >${element.list}</li>
+        <li >
+        <button id="done">Mark done</button>
+        </li>
+    </div>`
+    
+
+    
+
+    <script src="./index.js">
+   </script>
+    
+</body>
+</html>
+

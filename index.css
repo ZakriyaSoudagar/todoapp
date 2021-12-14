@@ -1,0 +1,204 @@
+
+*
+{
+padding:0;
+margin: 0;
+box-sizing: border-box;
+}
+body{
+    background: black;
+}
+
+.p1{
+font-size: 40px;
+padding-top: 100px;
+padding-left: 100px;
+font-weight: bolder;
+
+
+}
+.heading
+{
+    font-weight:lighter;
+    font-size: 40px;
+    padding-top: 100px;
+
+}
+.heading1
+{
+    
+    margin-top: 110px;
+    margin-left: 200px;
+    color: white;
+    width: 300px;
+    height: auto;
+    display: inline-block; 
+
+}
+#heading2
+{
+    
+    margin-top: 110px;
+    margin-left: 400px;
+    font-size: 40px;
+    text-decoration: none;
+    width: auto;
+    height: auto;
+    display: inline-block;
+
+}
+.task
+{
+    color: tomato;
+}
+a
+{
+    color: tomato;
+    text-decoration:none;
+    padding-right: 230px;
+    cursor: pointer;
+}
+#taskinput
+{
+    background:#D1E8E4;
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    top: 250px;
+    left: 550px;
+
+    display: none;
+}
+#taskinput2
+{
+    background:#D1E8E4;
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    top: 250px;
+    left: 550px;
+
+    display: none;
+}
+.new
+{
+    margin-top: 25px;
+    text-align: center;
+    font-size: 25px;
+}
+#inputfield
+{
+    margin-left: 40px;
+    width: 220px;
+    height: 20px;
+    margin-top: 15px;
+    border:none;
+
+}
+#inputfield2
+{
+    margin-left: 40px;
+    width: 220px;
+    height: 20px;
+    margin-top: 15px;
+    border:none;
+
+}
+#add
+{
+    width: 90px;
+    margin-left: 40px;
+    margin-top: 5px;
+    border: none;
+    height: 20px;
+    background: #396EB0;
+    color: white;
+    cursor: pointer;
+}
+#cancel
+{
+    width: 90px;
+    margin-left: 36px;
+    margin-top: 5px;
+    border: none;
+    height: 20px;
+    background: #396EB0;
+    color: white;
+    cursor: pointer;
+}
+#container
+{
+    
+    position: relative;
+    margin-top: 50px;
+    width: 1000px;
+    height: 200px;
+    padding: 20px 20px 20px 20px;
+    margin-left: 180px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    }
+
+.card
+{
+    width: 190px;
+    height: 230px;
+    margin: 20px 20px 20px 20px;
+    border-radius: 10px;
+    border: 1px solid tomato;
+    padding-left: 20px;
+    position: relative;
+    display: block;
+}    
+
+.addbtn
+{
+    position: absolute;
+    bottom: 5px;
+    right: 40px;
+    border-radius: 50%;
+    border: none;
+    font-size: 30px;
+    color: #009DAE;
+    cursor: pointer;
+}
+.delbtn
+{
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    border-radius: 50%;
+    border: none;
+    font-size: 30px;
+    color: #CD1818;
+    cursor: pointer;
+
+}
+#mainText
+{
+    font-size: 23px;
+    padding-top: 10px;
+    padding-left: 10px;
+    color: tomato;
+}
+.text
+{
+    width: 170px;
+    height: 20px;
+    font: 20px;
+
+}
+#done
+{
+    width: 70px;
+    height: 20px;
+    border-radius: 10px;
+    background: blue;
+    color: white;
+    border: none;
+}
+li{
+    display: inline;
+    font-size: 20px;
+}
