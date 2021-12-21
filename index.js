@@ -1,34 +1,29 @@
 
 // taskInput.style.display = "block";
-const show=()=>{
+function show() {
 var x = document.getElementById("taskinput").style.display="block";
 var y = document.getElementById("blur").style.filter = "blur(3px)";
   
 }
-const cancel =()=>
+function cancel ()
     {
      let x = document.getElementById("taskinput").style.display="none"; 
     let  y = document.getElementById("blur").style.filter = "blur(0px)";
      let x1 = document.getElementById("taskinput2").style.display="none"; 
     let y1 = document.getElementById("blur").style.filter = "blur(0px)";
     }
+
+
     var array = [];
     // var   card=""
     var i=-1
     var obj={};
     var tempObj = {};
     var list =[];
+
+
   let add =()=>
     {
-    //    const input = document.getElementById("inputfield");
-    //     const card = document.createElement("div");
-    //     const container = document.getElementById("container")
-    //     card.setAttribute("id","newcard");
-    //     card.style.width = "150px";
-    //     card.style.height = "200px";
-    //     card.style.background = "white";
-    //     container.appendChild(card);
-    
    
        
        
@@ -52,11 +47,11 @@ const cancel =()=>
     length =array.length-1
      array.forEach(function(element,index ){     
       
-        card +=`<div class="card" id="${element.id}">
+        card +=`<div class="card" id="${array[index].id}">
         <p id="mainText">${element.heading}</p>
         <hr>
         <div id="text"></div>
-        <button onclick="subtask(${index})" class="addbtn"><i class="fas fa-plus-circle"></i></button>
+        <button onclick="subtask(${array[index].id})" class="addbtn"><i class="fas fa-plus-circle"></i></button>
         <button class="delbtn" onclick="dele(${index})"><i class="fas fa-trash-alt"></i></button>
     </div>`;
     
@@ -93,16 +88,18 @@ const cancel =()=>
      
      array.forEach(function(element, index){     
       
-        card +=`<div class="card" id="${element.id}">
+        card +=`<div class="card" >
         <p id="mainText">${element.heading}</p>
         <hr>
-        <div class="text"></div>
-        <button onclick="subtask(this.id)" id= "${element.id}" class="addbtn"><i class="fas fa-plus-circle"></i></button>
+        <div class="text">
+        </div>
+        <button onclick="subtask(${array[index].id})" class="addbtn"><i class="fas fa-plus-circle"></i></button>
         <button class="delbtn" onclick="dele(${index})"><i class="fas fa-trash-alt"></i></button>
     </div>`;
    
-    
+    console.log(element.id)
 });
+
 
 container.innerHTML = card; 
 if(array.length == 0)
@@ -117,51 +114,75 @@ if(array.length == 0)
      console.log(array)
     }
 
-    function subtask (id)
+    function subtask (sub)
     {
         let add2 = document.getElementById("taskinput2");
         add2.style.display = "block";
         y = document.getElementById("blur").style.filter = "blur(0px)";
+        console.log(sub);
+        addList(sub);
+        display(sub);
+
     }
     var cardChild;
 
-    function addList()
+    function addList(sub)
     {
-        console.log();
+        console.log(sub);
         var inputfield2 = document.getElementById("inputfield2").value;
-        console.log(inputfield2)
-        array.forEach(function(element, index){
-            
+        
+        array.forEach(function(element, index, sub){
+            if (array[index].id==sub){
             var     tempObj= {
                     task : inputfield2
                 };
                 
                 array[index].list.push(tempObj); 
-                console.log(this.array);
+                console.log(array);
+             
+            }
             
             
         
     
         // const index = document.getElementById("index"
-        array[index].list.forEach(function (element, index)
-        {
-          cardChild += `
-            <li id="${index}" style="color:red">${element.task}</li>
-            <li >
-            <button id="done" onclick="done(${index})">Mark done</button>
-            </li>`
+        // array[index].list.forEach(function (element, index)
+        // {
+          
         
-        })
-       let mini= document.getElementById("text");
-       mini.innerHTML=cardChild;
-        console.log(mini);
-        let add3=document.getElementById("taskinput2");
-        add3.style.display="none";
+        // })
+       
+        
         
         
 
     });
+    
+    
 }
+let add3=document.getElementById("taskinput2");
+        add3.style.display="none";
+       function  display(sub)
+       {
+           console.log(sub)
+           cardChild="";
+        array.forEach(function(element, index, sub)
+        { 
+            console.log(array[index].id)
+            if (array[index].id==sub)
+        
+            cardChild += `
+        <li id="${index}" style="color:red">${array[index].list.task}</li>
+        <li >
+        <button id="done" onclick="done(${index})">Mark done</button>
+        </li>`
+
+          })
+          let mini= document.getElementById("text");
+       mini.innerHTML=cardChild;
+        console.log(cardChild);
+        }
+        
 
 
     
