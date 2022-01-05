@@ -1,55 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>TODO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href=".//index.css">
+    <link rel="stylesheet" href="./Adobe_XD_CC_icon.svg (1).png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d65e853b8d.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <div id="blur" >
-    <div class="heading1">
-    <span class="p1">Task</span><span class="heading">List</span>
-    </div>
-    <div id="heading2">
-     <a id="task" onclick=show() ><i class="fas fa-plus-circle"></i><span class="icon">Add Task</span></a>
-    </div>
-    <div id="container" >
-        
-
-    </div>
-    </div>
-    <div id="taskinput">
-        <div class="new" >
-            Add New Task
+    <div class="container" id="blur">
+        <div class="flex-row">
+            <p class="heading-bold">Tasks <span class="heading-thin">List</span></p>
+            <p class='btn' onclick="toggle()"><i class="fa fa-plus-circle btn1"></i> <span class='addItem'>Add Item</span>
+            </p>
         </div>
-        
-        <input type="text" name="" id="inputfield" value="">
-        <br><br>
-        <button type="submit" onclick=add()  id="add">ADD</button>
-        <button onclick=cancel() id="cancel">Cancel</button>
-    
-
-
-    </div>
-    <div id="taskinput2">
-        <div class="new" >
-            Add New Task
+        <div class="flex-row-list">
         </div>
-        
-        <input type="text" name="" id="inputfield2" value="">
-        <br><br>
-        <button type="submit" onclick=addList()  id="add">ADD</button>
-        <button onclick=cancel() id="cancel">Cancel</button>
-    
-
-
+        <div id='noitem'>No Items in the todo list</div>
     </div>
-    <script src="./index.js">
-   </script>
-    
+
+    <div class="container" id="blur-2">
+        <div class="flex-row">
+            <p class='back' onclick="goBack()"><i class="fa fa-chevron-circle-left"></i> Back</p>
+            <p class="heading-bold" id='currentHeading'>Trip to Paris</p>
+            <p class='btn' onclick="toggle()"><i class="fa fa-plus-circle"></i></p>
+        </div>
+        <div class="flex-row-center">
+            <div class="card-2">
+                <p class="card-heading" id='currentHeading-1'>Trip To Paris</p>
+                <ul id='singleList' style="list-style-type:none;">
+                </ul>
+                <div class='footer-2'>
+                    <button class='btn-completed' onclick="removeToDo(this)"><i class="fa fa-trash"
+                            aria-hidden="true"></i></button>
+                    <p class='btn-add' onclick="toggleAddItem(this)"><i class="fa fa-plus-circle"></i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-column popup" id="pop">
+        <div>
+            <p class="popup-text">Add New List</p>
+        </div>
+        <div>
+            <input type="text" id='listHeading' placeholder="Add New List">
+        </div>
+        <div>
+            <button onclick="addTodo()">Add</button>
+            <button onclick="toggle()">Close</button>
+        </div>
+    </div>
+
+    <div class="flex-column popup" id="popAddItem">
+        <div>
+            <p class="popup-text">Add New Item</p>
+        </div>
+        <div>
+            <input type="text" id='subListHeading' placeholder="Add New Item">
+        </div>
+        <div>
+            <button onclick="addSubTodo()">Add</button>
+            <button onclick="toggleAddItem()">Close</button>
+        </div>
+    </div>
+    <script src="./index.js" type="text/javascript"></script>
 </body>
-</html>
 
+</html>
+© 2022 GitHub, Inc.
+Terms
